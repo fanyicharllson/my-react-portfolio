@@ -77,9 +77,7 @@ export default function Hero() {
 
           {/* Hero Image */}
           <div className="flex-1 flex-center">
-            <ScrollAnimation animation={{
-              stagger: 1
-            }}>
+            <ScrollAnimation>
               <div className="relative w-full max-w-[400px] lg:max-w-[450px] aspect-square">
                 <div className="absolute inset-0 bg-purple-500/20 rounded-2xl blur-3xl transform -rotate-6"></div>
                 <img src={heroImage} alt="Hero" className="hero-image-style" />

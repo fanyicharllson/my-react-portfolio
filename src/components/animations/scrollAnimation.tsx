@@ -1,6 +1,6 @@
 // ScrollAnimation.jsx
 
-import { useRef, ReactNode } from "react";
+import { useRef, ReactNode } from 'react';
 import { useScrollAnimation } from "../../hooks/scrollAnimates";
 
 interface ScrollAnimationProps {
@@ -17,18 +17,18 @@ interface ScrollAnimationProps {
   className?: string;
 }
 
-const ScrollAnimation = ({
+const ScrollAnimation = ({ 
   children,
   yStart = 100,
   duration = 2,
-  ease = "power2.out",
-  start = "bottom bottom",
-  end = "top 80%",
-  toggleActions = "play none none reverse",
+  ease = 'power2.out',
+  start = 'bottom bottom',
+  end = 'top 80%',
+  toggleActions = 'play none none reverse',
   markers = false,
   once = true,
   animation = {},
-  className = "",
+  className = ''
 }: ScrollAnimationProps) => {
   const elementRef = useRef(null);
 
@@ -41,7 +41,7 @@ const ScrollAnimation = ({
     toggleActions,
     once,
     markers,
-    animation,
+    animation
   });
 
   return (

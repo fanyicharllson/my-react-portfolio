@@ -67,7 +67,7 @@ export default function Navbar() {
                 <a
                   href={link.url}
                   key={link.label}
-                  className="btn-backgroud py-2 px-4 rounded-lg max-sm:hidden"
+                  className="btn-backgroud py-2 px-4 rounded-lg max-sm:hidden hover:text-purple-500"
                 >
                   {link.label}
                 </a>
@@ -85,7 +85,7 @@ export default function Navbar() {
               <a
                 href={link.url}
                 key={link.label}
-                className="hidden lg:block text-gray-500 dark:text-white transition-all duration-300 ease-in-out"
+                className="hidden lg:block text-gray-500 dark:text-white transition-all duration-300 ease-in-out hover:text-purple-500 dark:hover:text-purple-500"
               >
                 {link.label}
               </a>
