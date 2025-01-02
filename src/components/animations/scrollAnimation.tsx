@@ -1,5 +1,3 @@
-// ScrollAnimation.jsx
-
 import { useRef, ReactNode } from 'react';
 import { useScrollAnimation } from "../../hooks/scrollAnimates";
 
