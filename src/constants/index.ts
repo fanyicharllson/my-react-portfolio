@@ -1,6 +1,10 @@
+interface NavLinkProps {
+    label: string;
+    url: string;
+}
 
 // Navbar links
-export const NAV_LINKS = [
+export const NAV_LINKS: NavLinkProps[] = [
     { label: "Services", url: "#services" },
     { label: "Works", url: "#works" },
     { label: "Resume", url: "#resume" },

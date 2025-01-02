@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -25,9 +26,35 @@ body {
   padding-inline: 1rem;
 }
 
+.bg-gradient {
+  background: linear-gradient(90deg, #2d1b4e 0%, #1a0b2e 100%);
+}
+.logo {
+  font-family: "Montserrat", sans-serif;
+  @apply text-4xl font-extrabold tracking-tight;
+  @apply bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-violet-400 via-purple-300 to-fuchsia-300;
+  @apply hover:from-fuchsia-300 hover:via-purple-300 hover:to-violet-400;
+  @apply transition-all duration-300;
+  @apply cursor-pointer;
+  text-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
 /* Utility Classes */
 @layer utilities {
   .flex-center {
     @apply flex items-center justify-center;
   }
+
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+  .btn-backgroud {
+    @apply bg-gradient-to-r from-violet-400 via-purple-300 to-fuchsia-300;
+    @apply hover:from-fuchsia-300 hover:via-purple-300 hover:to-violet-400;
+    @apply transition-all duration-300;
+    @apply cursor-pointer;
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  }
 }
+
