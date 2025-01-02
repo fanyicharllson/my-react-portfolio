@@ -10,7 +10,7 @@ import ScrollAnimation from "@/components/animations/scrollAnimation";
 
 export default function Hero() {
   return (
-    <section className="pt-10 h-screen w-full" id="hero">
+    <section className="pt-10 w-full" id="hero">
       <div className="screen-max-width">
         <div className="flex min-h-[calc(100vh-80px)] flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-16">
           {/* Hero Text */}

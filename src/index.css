@@ -24,7 +24,34 @@ body {
   position: relative;
   padding-inline: 1rem;
 }
+.section {
+  @apply flex flex-col px-4 py-16 sm:px-6 lg:px-8;
+  width: 100%;
+  padding-block: 4rem;
 
+  @media (min-width: 768px) {
+    padding-block: 6rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding-block: 8rem;
+  }
+}
+
+.section-full {
+  min-height: 100vh;
+}
+
+
+
+.section-title {
+  @apply tracking-wider  
+    bg-gradient-to-r from-purple-600 to-purple-400 
+    text-transparent bg-clip-text mb-4 text-3xl md:text-4xl lg:text-5xl font-bold;
+}
+.section-subtitle {
+  @apply mt-4 text-slate-600 dark:text-slate-400 text-lg md:text-xl max-w-2xl mx-auto;
+}
 .bg-gradient {
   background: linear-gradient(90deg, #2d1b4e 0%, #1a0b2e 100%);
 }
@@ -55,6 +82,7 @@ body {
     @apply cursor-pointer;
     text-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
   }
+  /* Hero Section utility classes */
   .hero-btn-style {
     @apply px-6 py-3 rounded-full text-purple-700 hover:bg-purple-700 hover:text-white border-2 border-purple-700 transition-all duration-300;
   }
@@ -68,8 +96,9 @@ body {
     @apply text-6xl font-bold max-md:text-4xl text-gray-500 dark:text-white;
   }
   .hero-text-style {
-    @apply text-gray-500 dark:text-white ;
+    @apply text-gray-500 dark:text-white;
   }
+  /* Services Section utility classes */
 }
 @layer base {
   :root {
