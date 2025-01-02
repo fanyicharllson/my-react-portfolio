@@ -1,6 +1,13 @@
+// Navbar links interface
 interface NavLinkProps {
   label: string;
   url: string;
+}
+
+// Hero Section data interface
+interface HERO_DATAProps {
+    numbers: string[];
+    texts: string[];
 }
 
 // Navbar links
@@ -13,3 +20,9 @@ export const NAV_LINKS: NavLinkProps[] = [
   { label: "Contact", url: "#contact" },
   { label: "Hire Me!", url: "#hire-me" },
 ];
+
+// Hero Section
+export const HERO_DATA: HERO_DATAProps = {
+  numbers: ['2', '20+', '1.5k'],
+  texts: ["Years of Experience", "Projects Completed", "Happy Clients"],
+};

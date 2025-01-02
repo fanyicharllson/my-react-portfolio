@@ -1,6 +1,88 @@
+import { HERO_DATA } from "@/constants";
+import { heroImage } from "@/utils";
+import { FaFacebookF } from "react-icons/fa";
+import { FaDownload } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <section className="pt-10  h-screen" id="hero">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, neque quo. Magnam, dolorem, dignissimos a enim aliquam necessitatibus eius, incidunt placeat temporibus eum ullam repellendus? Incidunt, nobis? Dolor dolorum eaque, provident debitis veniam iusto obcaecati ut repellendus dolore officia, earum omnis deleniti doloribus voluptas? Harum vel nemo id corrupti aspernatur velit necessitatibus, porro repellendus eligendi dolor inventore maxime obcaecati ab aliquam autem commodi fugit cum? Reiciendis cum maiores, temporibus harum maxime ullam tenetur sit aliquam quos asperiores illo magni iusto minus quidem excepturi provident quae debitis recusandae autem adipisci dicta ut? Consequuntur, rerum deleniti voluptatibus aspernatur quam sed sit itaque.</section>
-  )
+    <section className="pt-10 h-screen w-full" id="hero">
+      <div className="screen-max-width">
+        <div className="flex min-h-[calc(100vh-80px)] flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-16">
+          {/* Hero Text */}
+          <div className="flex-1 text-center lg:text-left max-w-[600px]">
+            <h1 className="font-bold">
+              <div className="text-2xl sm:text-3xl font-bold">
+                I am Charllson
+              </div>
+              <div className="pt-4 sm:pt-8">
+                <span className="text-5xl sm:text-7xl font-bold">
+                  <span className="text-purple-500 inline-block">
+                    Full Stack Developer
+                  </span>
+                </span>
+              </div>
+              <p className="text-gray-500 mt-6 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                Crafting innovative digital solutions through clean, efficient
+                code. Specialized in building scalable web applications that
+                combine cutting-edge frontend design with robust backend
+                architecture.
+              </p>
+            </h1>
+
+            {/* CTA Buttons */}
+            <div className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start items-center">
+              <button className="hero-btn-style inline-flex items-center gap-2">
+                Download CV
+                <FaDownload className="w-4 h-4" />
+              </button>
+              <div className="flex gap-4">
+                <a
+                  href="https://github.com/fanyicharllson"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hero-icon-style"
+                >
+                  <FaGithub className="w-6 h-6" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/fanyi-charllson-ab19492b8/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hero-icon-style"
+                >
+                  <FaLinkedinIn className="w-6 h-6" />
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100095106464913"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hero-icon-style"
+                >
+                  <FaFacebookF className="w-6 h-6" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Hero Image */}
+          <div className="flex-1 flex-center">
+            <div className="relative w-full max-w-[400px] lg:max-w-[450px] aspect-square">
+              <div className="absolute inset-0 bg-purple-500/20 rounded-2xl blur-3xl transform -rotate-6"></div>
+              <img src={heroImage} alt="Hero" className="hero-image-style" />
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col max-md:gap-y-10 md:flex-row justify-around pt-12">
+          {HERO_DATA.numbers.map((number, index) => (
+            <div className="flex-center flex-col">
+              <p className="hero-number-style">{number}</p>
+              <p className="hero-text-style">{HERO_DATA.texts[index]}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
