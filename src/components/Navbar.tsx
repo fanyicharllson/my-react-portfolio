@@ -48,7 +48,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`py-4 z-50 transition-all duration-300 ${
+      className={`py-4 z-50 transition-all duration-300 shadow-sm ${
         isSticky
           ? "fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-md shadow-sm"
           : "relative"
@@ -85,7 +85,7 @@ export default function Navbar() {
               <a
                 href={link.url}
                 key={link.label}
-                className="hidden lg:block hover:text-purple-500 transition-all duration-300 ease-in-out"
+                className="hidden lg:block text-gray-500 dark:text-white hover:text-purple-500 dark:hover:text-purple-500 transition-all duration-300 ease-in-out"
               >
                 {link.label}
               </a>

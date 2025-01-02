@@ -13,7 +13,7 @@ export default function Hero() {
           {/* Hero Text */}
           <div className="flex-1 text-center lg:text-left max-w-[600px]">
             <h1 className="font-bold">
-              <div className="text-2xl sm:text-3xl font-bold">
+              <div className="text-2xl sm:text-3xl font-bold text-gray-500 dark:text-white">
                 I am Charllson
               </div>
               <div className="pt-4 sm:pt-8">

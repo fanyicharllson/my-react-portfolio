@@ -23,6 +23,6 @@ export const NAV_LINKS: NavLinkProps[] = [
 
 // Hero Section
 export const HERO_DATA: HERO_DATAProps = {
-  numbers: ['2', '20+', '1.5k'],
+  numbers: ['2', '3+', '10'],
   texts: ["Years of Experience", "Projects Completed", "Happy Clients"],
 };
