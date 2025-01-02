@@ -75,7 +75,7 @@ export default function Navbar() {
                 <div className="lg:hidden">
                   <button
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    className="p-2"
+                    className="p-2 text-gray-700 dark:text-white"
                   >
                     {isMenuOpen ? <X size={34} /> : <Menu size={34} />}
                   </button>
@@ -85,7 +85,7 @@ export default function Navbar() {
               <a
                 href={link.url}
                 key={link.label}
-                className="hidden lg:block text-gray-500 dark:text-white hover:text-purple-500 dark:hover:text-purple-500 transition-all duration-300 ease-in-out"
+                className="hidden lg:block text-gray-500 dark:text-white transition-all duration-300 ease-in-out"
               >
                 {link.label}
               </a>
@@ -97,7 +97,7 @@ export default function Navbar() {
       <div className="lg:hidden ">
         {isMenuOpen && (
           <div
-            className={`fixed inset-0 top-[72px] h-screen bg-background transition-all duration-300 ease-in-out ${
+            className={`fixed inset-0 top-[72px] h-screen bg-background  transition-all duration-300 ease-in-out ${
               isMenuOpen
                 ? "opacity-100 translate-x-0"
                 : "opacity-0 translate-x-full pointer-events-none"
@@ -108,9 +108,9 @@ export default function Navbar() {
                 <a
                   key={link.label}
                   href={link.url}
-                  className={`text-xl hover:text-purple-500 transition-all duration-300 ease-in-out ${
+                  className={`text-xl hover:text-purple-500 dark:text-white text-gray-500 dark:hover:text-purple-500 transition-all duration-300 ease-in-out ${
                     link.label === "Hire Me!"
-                      ? "btn-backgroud py-2 px-4 rounded-lg"
+                      ? "btn-backgroud text-white dark:text-white py-2 px-4 rounded-lg"
                       : ""
                   }`}
                   onClick={() => setIsMenuOpen(false)}
