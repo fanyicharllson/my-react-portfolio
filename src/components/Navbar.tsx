@@ -5,6 +5,35 @@ import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroSection = document.querySelector("#hero");
+      if (heroSection) {
+        const heroHeight = heroSection.getBoundingClientRect().height;
+        setIsSticky(window.scrollY > heroHeight);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setIsMenuOpen(false);
+        document.body.style.overflow = "unset";
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -13,16 +42,22 @@ export default function Navbar() {
       document.body.style.overflow = "unset";
     }
     return () => {
-        document.body.style.overflow = 'unset';
-      };
+      document.body.style.overflow = "unset";
+    };
   }, [isMenuOpen]);
 
-
-
   return (
-    <header className="py-4 sticky top-0 z-50">
+    <header
+      className={`py-4 z-50 transition-all duration-300 ${
+        isSticky
+          ? "fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-md shadow-sm"
+          : "relative"
+      }`}
+    >
       <div className="screen-max-width flex-between">
-        <h1 className="logo">Charllson</h1>
+        <h1 className="logo">
+          <a href="/">Charllson</a>
+        </h1>
 
         {/* Desktop Navbar */}
         <div className="flex-center gap-10 max-lg:gap-5">
@@ -47,7 +82,11 @@ export default function Navbar() {
                 </div>
               </>
             ) : (
-              <a href={link.url} key={link.label} className="hidden lg:block">
+              <a
+                href={link.url}
+                key={link.label}
+                className="hidden lg:block hover:text-purple-500 transition-all duration-300 ease-in-out"
+              >
                 {link.label}
               </a>
             )
@@ -56,15 +95,20 @@ export default function Navbar() {
       </div>
       {/* Mobile Navbar */}
       <div className="lg:hidden ">
-        {/* Mobile Menu Overlay */}
         {isMenuOpen && (
-          <div className="fixed inset-0 top-[72px] bg-background transition-all duration-300 ease-in-out">
+          <div
+            className={`fixed inset-0 top-[72px] h-screen bg-background transition-all duration-300 ease-in-out ${
+              isMenuOpen
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 translate-x-full pointer-events-none"
+            }`}
+          >
             <nav className="flex flex-col items-center gap-8 p-8">
               {NAV_LINKS.map((link) => (
                 <a
                   key={link.label}
                   href={link.url}
-                  className={`text-xl ${
+                  className={`text-xl hover:text-purple-500 transition-all duration-300 ease-in-out ${
                     link.label === "Hire Me!"
                       ? "btn-backgroud py-2 px-4 rounded-lg"
                       : ""
@@ -74,7 +118,6 @@ export default function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <ModeToggle />
             </nav>
           </div>
         )}
