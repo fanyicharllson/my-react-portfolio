@@ -15,7 +15,9 @@ export default function Works() {
           </ScrollAnimation>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
           {WORKS_DATA.map((work, index) => (
+            <ScrollAnimation key={index}>
             <div
               key={index}
               className="rounded-xl overflow-hidden shadow-xl hover:shadow-xl transition-all duration-300 group relative flex flex-col bg-gray-200 dark:bg-gray-800"
@@ -67,6 +69,8 @@ export default function Works() {
                 </div>
               </div>
             </div>
+            </ScrollAnimation>
+
           ))}
         </div>
         <div className="flex-center pt-10 pb-10">

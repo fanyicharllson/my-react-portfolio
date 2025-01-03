@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="CharllsonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9D4EDD"/>
+      <stop offset="100%" stop-color="#5A189A"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#CharllsonGradient)" d="M128 20c60.2 0 109 48.8 109 109s-48.8 109-109 109S19 189.2 19 129 67.8 20 128 20zm0 40c-38.1 0-69 30.9-69 69s30.9 69 69 69 69-30.9 69-69-30.9-69-69-69zm0 20c27.1 0 49 21.9 49 49s-21.9 49-49 49-49-21.9-49-49 21.9-49 49-49z"/>
+</svg>
