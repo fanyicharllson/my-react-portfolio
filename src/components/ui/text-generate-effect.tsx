@@ -40,7 +40,7 @@ export const TextGenerateEffect: React.FC<TextGenerateEffectProps> = ({
     return (
       <div className={`${className} ${smoothScroll ? 'transition-all duration-300' : ''}`}>
         {displayedText}
-        <span className="animate-pulse">|</span>
+        <span className="animate-pulse text-purple-500">|</span>
       </div>
     );
   };

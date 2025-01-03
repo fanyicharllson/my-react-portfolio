@@ -71,9 +71,9 @@ export const WORKS_DATA = [
     {
         img: jsImage,
         title: "Food Order Website",
-        disc: "A platform for charitable donations.",
+        disc: "A website for ordering food.",
         github: "https://github.com/fanyicharllson/food-order-website",
-        technologies: ["Sass", "JavaScript", "css", "html", "Bootstrap"],
+        technologies: ["Sass", "JavaScript", "css", "html", "Bootstrap", "slider"],
         link: "https://food-order-charlse.netlify.app/",
     },
     {
