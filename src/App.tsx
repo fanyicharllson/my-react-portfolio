@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider"
 import Services from "./components/Services";
 import Works from "./components/Works";
+import Skills from "./components/Skills";
+
 export default function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
@@ -11,6 +13,7 @@ export default function App() {
         <Hero />
         <Services />
         <Works />
+        <Skills />
       </main>
     </ThemeProvider>
   )

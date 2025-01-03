@@ -1,5 +1,5 @@
-import { charityImage } from "../utils"
-import { jsImage } from "../utils"
+import { charityImage, jsImage, nextImage, reactImage, typescriptImage, tailwindImage } from "../utils"
+import { foodImage } from "../utils"
 
 // Navbar links interface
 interface NavLinkProps {
@@ -19,6 +19,14 @@ interface ServiceItemProps {
   title: string;
   disc: string;
 }
+
+// Skills Section data interface
+interface Skill {
+  img: string;
+  title: string;
+  percentage: string;
+}
+
 
 
 
@@ -69,7 +77,7 @@ export const WORKS_DATA = [
         link: "https://charityhub-rho.vercel.app/",
     },
     {
-        img: jsImage,
+        img: foodImage,
         title: "Food Order Website",
         disc: "A website for ordering food.",
         github: "https://github.com/fanyicharllson/food-order-website",
@@ -85,3 +93,32 @@ export const WORKS_DATA = [
         link: "https://charityhub-rho.vercel.app/",
     },
 ];
+
+// Skills Section
+export const SKILLS_DATA: Skill[] = [
+    {
+        img: jsImage,
+        title: "JavaScript",
+        percentage: "80%",
+    },
+    {
+       img: reactImage,
+       title: "React",
+       percentage: "85%",
+    },
+    {
+       img: nextImage,
+       title: "Next.js",
+       percentage: "65%",
+    },
+    {
+      img: typescriptImage,
+      title: "TypeScript",
+      percentage: "60%",
+    },
+    {
+      img: tailwindImage,
+      title: "Tailwind",
+      percentage: "70%",
+    },
+] 
