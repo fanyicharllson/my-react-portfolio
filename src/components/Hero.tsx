@@ -79,7 +79,7 @@ export default function Hero() {
           <div className="flex-1 flex-center">
             <ScrollAnimation>
               <div className="relative w-full max-w-[400px] lg:max-w-[450px] aspect-square">
-                <div className="absolute inset-0 bg-purple-500/20 rounded-2xl blur-3xl transform -rotate-6"></div>
+                <div className="absolute inset-0 bg-purple-500/20 rounded-2xl blur-3xl transform "></div>
                 <img src={heroImage} alt="Hero" className="hero-image-style" />
               </div>
             </ScrollAnimation>

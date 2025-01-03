@@ -4,14 +4,10 @@ import { SERVICES_DATA } from "@/constants";
 export default function Services() {
   return (
     <section className="section">
-      <div className="container mx-auto px-4">
-        <div className="mx-auto text-center max-w-2xl mb-16">
+      <div className="">
+        <div className="mx-auto text-center max-w-2xl pb-16">
           <ScrollAnimation>
-            <p
-              className="section-title"
-            >
-              My Quality Services
-            </p>
+            <p className="section-title">My Quality Services</p>
             <h2 className="section-subtitle">
               Transforming ideas into digital reality with expertise in web
               development, responsive design, and innovative solutions.

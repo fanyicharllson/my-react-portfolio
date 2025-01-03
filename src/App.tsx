@@ -6,7 +6,7 @@ import Works from "./components/Works";
 export default function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <main className=" text-white min-h-screen flex flex-col max-screen-width">
+      <main className=" text-white min-h-screen flex flex-col">
         <Navbar />
         <Hero />
         <Services />

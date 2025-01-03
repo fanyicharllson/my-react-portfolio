@@ -97,7 +97,7 @@ export default function Navbar() {
       <div className="lg:hidden ">
         {isMenuOpen && (
           <div
-            className={`fixed inset-0 top-[72px] h-screen bg-background  transition-all duration-300 ease-in-out ${
+            className={`fixed inset-0 top-[72px] h-screen  bg-background  transition-all duration-300 ease-in-out ${
               isMenuOpen
                 ? "opacity-100 translate-x-0"
                 : "opacity-0 translate-x-full pointer-events-none"
