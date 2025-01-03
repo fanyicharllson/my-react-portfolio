@@ -7,12 +7,20 @@ import {
   FaGithub,
 } from "react-icons/fa";
 import ScrollAnimation from "@/components/animations/scrollAnimation";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+
+
+const words = `Crafting innovative digital solutions through clean, efficient
+                  code. Specialized in building scalable web applications that
+                  combine cutting-edge frontend design with robust backend
+                  architecture.`;
+                  
 
 export default function Hero() {
   return (
     <section className="pt-10 w-full" id="hero">
       <div className="screen-max-width">
-        <div className="flex min-h-[calc(100vh-80px)] flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-16">
+        <div className="flex min-h-[calc(100vh-80px)] flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
           {/* Hero Text */}
           <div className="flex-1 text-center lg:text-left max-w-[600px]">
             <ScrollAnimation>
@@ -23,15 +31,12 @@ export default function Hero() {
                 <div className="pt-4 sm:pt-8">
                   <span className="text-5xl sm:text-7xl font-bold">
                     <span className="text-purple-500 inline-block">
-                      Full Stack Developer
+                      Web Developer
                     </span>
                   </span>
                 </div>
                 <p className="text-gray-500 mt-6 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                  Crafting innovative digital solutions through clean, efficient
-                  code. Specialized in building scalable web applications that
-                  combine cutting-edge frontend design with robust backend
-                  architecture.
+                <TextGenerateEffect words={words} className="inline-block" filter={true} delay={0.03} continuous={false} smoothScroll={true}/>
                 </p>
               </h1>
             </ScrollAnimation>
@@ -86,7 +91,7 @@ export default function Hero() {
           </div>
         </div>
         <ScrollAnimation>
-          <div className="flex flex-col max-md:gap-y-10 md:flex-row justify-around pt-12">
+          <div className="flex flex-col max-md:gap-y-10 md:flex-row justify-around">
             {HERO_DATA.numbers.map((number, index) => (
               <div className="flex-center flex-col">
                 <p className="hero-number-style">{number}</p>

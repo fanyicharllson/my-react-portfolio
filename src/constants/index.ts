@@ -1,3 +1,6 @@
+import { charityImage } from "../utils"
+import { jsImage } from "../utils"
+
 // Navbar links interface
 interface NavLinkProps {
   label: string;
@@ -16,6 +19,8 @@ interface ServiceItemProps {
   title: string;
   disc: string;
 }
+
+
 
 // Navbar links
 export const NAV_LINKS: NavLinkProps[] = [
@@ -51,4 +56,32 @@ export const SERVICES_DATA: ServiceItemProps[] = [
     title: "Innovative Solutions",
     disc: "Delivering creative and efficient solutions to complex problems through cutting-edge development approaches.",
   },
+];
+
+// Works section
+export const WORKS_DATA = [
+    {
+        img: charityImage,
+        title: "Charity Hub",
+        disc: "A platform for charitable donations.",
+        github: "https://github.com/fanyicharllson/CharityHub",
+        technologies: ["React", "Tailwind", "TypeScript", "Next.js", "Hyper UI"],
+        link: "https://charityhub-rho.vercel.app/",
+    },
+    {
+        img: jsImage,
+        title: "Food Order Website",
+        disc: "A platform for charitable donations.",
+        github: "https://github.com/fanyicharllson/food-order-website",
+        technologies: ["Sass", "JavaScript", "css", "html", "Bootstrap"],
+        link: "https://food-order-charlse.netlify.app/",
+    },
+    {
+        img: charityImage,
+        title: "Charity Hub",
+        disc: "A platform for charitable donations.",
+        github: "https://github.com/Rho-dev/charity-hub",
+        technologies: ["React", "Tailwind", "TypeScript", "Next.js", "Shadcn"],
+        link: "https://charityhub-rho.vercel.app/",
+    },
 ];
