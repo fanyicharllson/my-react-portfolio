@@ -4,6 +4,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 import Services from "./components/Services";
 import Works from "./components/Works";
 import Skills from "./components/Skills";
+import Testimonials from "./components/Testimonials";
+
 
 export default function App() {
   return (
@@ -14,6 +16,7 @@ export default function App() {
         <Services />
         <Works />
         <Skills />
+        <Testimonials />
       </main>
     </ThemeProvider>
   )

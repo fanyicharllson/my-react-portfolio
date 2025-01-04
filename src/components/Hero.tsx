@@ -101,7 +101,7 @@ export default function Hero() {
         <ScrollAnimation>
           <div className="flex flex-col max-md:gap-y-10 md:flex-row justify-around">
             {HERO_DATA.numbers.map((number, index) => (
-              <div className="flex-center flex-col">
+              <div className="flex-center flex-col" key={index}>
                 <p className="hero-number-style">{number}</p>
                 <p className="hero-text-style">{HERO_DATA.texts[index]}</p>
               </div>

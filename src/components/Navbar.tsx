@@ -63,10 +63,9 @@ export default function Navbar() {
         <div className="flex-center gap-10 max-lg:gap-5">
           {NAV_LINKS.map((link) =>
             link.label === "Hire Me!" ? (
-              <>
+              <div key={link.label} className="flex items-center gap-10 max-lg:gap-5">
                 <a
                   href={link.url}
-                  key={link.label}
                   className="btn-backgroud py-2 px-4 rounded-lg max-sm:hidden hover:text-purple-500"
                 >
                   {link.label}
@@ -80,11 +79,11 @@ export default function Navbar() {
                     {isMenuOpen ? <X size={34} /> : <Menu size={34} />}
                   </button>
                 </div>
-              </>
+              </div>
             ) : (
               <a
-                href={link.url}
                 key={link.label}
+                href={link.url}
                 className="hidden lg:block text-gray-500 dark:text-white transition-all duration-300 ease-in-out hover:text-purple-500 dark:hover:text-purple-500"
               >
                 {link.label}
@@ -93,11 +92,12 @@ export default function Navbar() {
           )}
         </div>
       </div>
+
       {/* Mobile Navbar */}
-      <div className="lg:hidden ">
+      <div className="lg:hidden">
         {isMenuOpen && (
           <div
-            className={`fixed inset-0 top-[72px] h-screen  bg-background  transition-all duration-300 ease-in-out ${
+            className={`fixed inset-0 top-[72px] h-screen bg-background transition-all duration-300 ease-in-out ${
               isMenuOpen
                 ? "opacity-100 translate-x-0"
                 : "opacity-0 translate-x-full pointer-events-none"
