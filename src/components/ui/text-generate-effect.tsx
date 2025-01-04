@@ -14,7 +14,7 @@ interface TextGenerateEffectProps {
 export const TextGenerateEffect: React.FC<TextGenerateEffectProps> = ({
     words,
     className = "",
-    filter = true,
+    // filter = true,
     delay = 0.05,
     continuous = true,
     smoothScroll = true,
