@@ -1,34 +1,33 @@
 import { TESTIMONIALS_DATA } from "@/constants";
 import { motion } from "framer-motion";
 
-
 export default function Testimonials() {
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-          opacity: 1,
-          transition: {
-            delayChildren: 0.2,
-            staggerChildren: 0.2,
-          },
-        },
-      };
-    
-      const cardVariants = {
-        hidden: {
-          opacity: 0,
-          y: 50,
-        },
-        visible: {
-          opacity: 1,
-          y: 0,
-          transition: {
-            duration: 0.7,
-            ease: "easeOut",
-          },
-        },
-      };
-    
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3, 
+        staggerChildren: 0.15, 
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      y: 50,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8, 
+        ease: [0.4, 0, 0.2, 1],
+      },
+    },
+  };
+
   return (
     <section className="section dark:bg-gray-900 bg-gray-200">
       <div>
@@ -44,11 +43,11 @@ export default function Testimonials() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.3 }} // Trigger animation when 30% of element is in view
         >
           {TESTIMONIALS_DATA.map((testimonial, index) => (
             <motion.div
-              key={index}
+              key={`testimonial-${index}`} // Ensure a unique key
               variants={cardVariants}
               className="relative p-12 rounded-xl transition-all duration-300 hover:-translate-y-2
                         bg-gradient-to-br from-purple-500/10 to-purple-700/20 
@@ -80,4 +79,3 @@ export default function Testimonials() {
     </section>
   );
 }
-

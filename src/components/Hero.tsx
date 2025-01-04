@@ -99,7 +99,7 @@ export default function Hero() {
           </div>
         </div>
         <ScrollAnimation>
-          <div className="flex flex-col max-md:gap-y-10 md:flex-row justify-around">
+          <div className="flex flex-col max-md:gap-y-10 md:flex-row justify-around pt-10">
             {HERO_DATA.numbers.map((number, index) => (
               <div className="flex-center flex-col" key={index}>
                 <p className="hero-number-style">{number}</p>
