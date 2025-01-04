@@ -28,7 +28,7 @@ export default function Skills() {
   };
 
   return (
-    <section className="section">
+    <section className="section dark:bg-gradient-to-l dark:from-black dark:from-50% dark:to-purple-500">
       <div>
         <div className="mx-auto text-center max-w-2xl">
           <p className="section-title">My Skills</p>
@@ -62,7 +62,7 @@ export default function Skills() {
                 </p>
               </div>
               <div>
-                <p className="text-center text-gray-600 dark:text-purple-500 text-xl mt-6">
+                <p className="text-center text-gray-600 dark:text-slate-400 text-xl mt-6">
                   {skill.title}
                 </p>
               </div>

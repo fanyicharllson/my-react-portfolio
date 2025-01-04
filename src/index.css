@@ -42,8 +42,6 @@ body {
   min-height: 100vh;
 }
 
-
-
 .section-title {
   @apply tracking-wider  
     bg-gradient-to-r from-purple-600 to-purple-400 
@@ -85,7 +83,7 @@ body {
   .btn-backgroud-hover {
     @apply bg-gradient-to-r from-purple-600 to-purple-600 hover:from-purple-700 hover:to-purple-700 text-white py-3 px-16 max-sm:px-10 rounded-lg flex items-center gap-2 transition-all duration-300 shadow-lg hover:shadow-purple-500/25;
   }
-  
+
   /* Hero Section utility classes */
   .hero-btn-style {
     @apply px-6 py-3 rounded-full text-purple-700 hover:bg-purple-700 hover:text-white border-2 border-purple-700 transition-all duration-300;

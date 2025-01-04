@@ -9,17 +9,18 @@ import {
 import ScrollAnimation from "@/components/animations/scrollAnimation";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
-
 const words = `Crafting innovative digital solutions through clean, efficient
                   code. Specialized in building scalable web applications that
                   combine cutting-edge frontend design with robust backend
                   architecture.`;
-                  
 
 export default function Hero() {
   return (
-    <section className="pt-10 w-full" id="hero">
-      <div className="screen-max-width">
+    <section
+      className="pt-10 w-full dark:bg-gradient-to-tl dark:from-black dark:from-60% dark:to-purple-600 bg-gradient-to-tl from-white from-60% to-purple-400"
+      id="hero"
+    >
+      <div className="screen-max-width pb-16">
         <div className="flex min-h-[calc(100vh-80px)] flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
           {/* Hero Text */}
           <div className="flex-1 text-center lg:text-left max-w-[600px]">
@@ -36,7 +37,14 @@ export default function Hero() {
                   </span>
                 </div>
                 <p className="text-gray-500 mt-6 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                <TextGenerateEffect words={words} className="inline-block" filter={true} delay={0.03} continuous={false} smoothScroll={true}/>
+                  <TextGenerateEffect
+                    words={words}
+                    className="inline-block"
+                    filter={true}
+                    delay={0.03}
+                    continuous={false}
+                    smoothScroll={true}
+                  />
                 </p>
               </h1>
             </ScrollAnimation>
