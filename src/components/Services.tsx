@@ -3,7 +3,7 @@ import { SERVICES_DATA } from "@/constants";
 
 export default function Services() {
   return (
-    <section className="section">
+    <section className="section" id="services">
       <div className="">
         <div className="mx-auto text-center max-w-2xl pb-16">
           <ScrollAnimation>

@@ -3,7 +3,7 @@ import { WORKS_DATA } from "../constants";
 
 export default function Works() {
   return (
-    <section className="bg-gray-200 dark:bg-gray-900">
+    <section className="bg-gray-200 dark:bg-gray-900" id="works">
       <div className="pt-16 screen-max-width pb-10">
         <div className="mx-auto text-center max-w-2xl pb-16">
           <motion.div

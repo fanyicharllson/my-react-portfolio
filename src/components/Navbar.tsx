@@ -7,6 +7,24 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
 
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    const element = document.getElementById(targetId);
+    if (element) {
+      // setIsMenuOpen(false); // Close mobile menu if open
+      // element.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const heroSection = document.querySelector("#hero");
@@ -66,6 +84,7 @@ export default function Navbar() {
               <div key={link.label} className="flex items-center gap-10 max-lg:gap-5">
                 <a
                   href={link.url}
+                  onClick={(e) => handleNavClick(e, link.url.substring(1))}
                   className="btn-backgroud py-2 px-4 rounded-lg max-sm:hidden hover:text-purple-500"
                 >
                   {link.label}
@@ -108,12 +127,15 @@ export default function Navbar() {
                 <a
                   key={link.label}
                   href={link.url}
+                  onClick={(e) => {
+                    handleNavClick(e, link.url.substring(1));
+                    setIsMenuOpen(false);
+                  }}
                   className={`text-xl hover:text-purple-500 dark:text-white text-gray-500 dark:hover:text-purple-500 transition-all duration-300 ease-in-out ${
                     link.label === "Hire Me!"
                       ? "btn-backgroud text-white dark:text-white py-2 px-4 rounded-lg"
                       : ""
                   }`}
-                  onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
                 </a>

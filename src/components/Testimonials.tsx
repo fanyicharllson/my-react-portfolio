@@ -29,7 +29,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="section dark:bg-gray-900 bg-gray-200">
+    <section className="section dark:bg-gray-900 bg-gray-200" id="testimonials">
       <div>
         <div className="mx-auto text-center max-w-2xl">
           <p className="section-title">What My Client's Say</p>

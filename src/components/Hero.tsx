@@ -17,8 +17,9 @@ const words = `Crafting innovative digital solutions through clean, efficient
 export default function Hero() {
   return (
     <section
-      className="pt-10 w-full dark:bg-gradient-to-tl dark:from-black dark:from-60% dark:to-purple-600 bg-gradient-to-tl from-white from-60% to-purple-400"
       id="hero"
+      className="pt-10 w-full dark:bg-gradient-to-tl dark:from-black dark:from-60% dark:to-purple-600 bg-gradient-to-tl from-white from-60% to-purple-400"
+      
     >
       <div className="screen-max-width pb-16">
         <div className="flex min-h-[calc(100vh-80px)] flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">

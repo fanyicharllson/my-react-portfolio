@@ -28,7 +28,7 @@ export default function Skills() {
   };
 
   return (
-    <section className="section dark:bg-gradient-to-tl dark:from-black dark:from-60% dark:to-purple-500 bg-gradient-to-tl from-white from-60% to-purple-400">
+    <section className="section dark:bg-gradient-to-tl dark:from-black dark:from-60% dark:to-purple-500 bg-gradient-to-tl from-white from-60% to-purple-400" id="skills">
       <div>
         <div className="mx-auto text-center max-w-2xl">
           <p className="section-title">My Skills</p>
