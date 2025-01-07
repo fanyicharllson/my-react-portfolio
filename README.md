@@ -25,6 +25,9 @@ A modern, responsive portfolio website built with React, TypeScript, and Vite sh
 ## Getting Started
 
 1. Clone the repository
+    ```bash
+    git clone https://github.com/fanyicharllson/my-react-portfolio
+    ```
 2. Install dependencies
    ```bash
    npm install
