@@ -74,7 +74,7 @@ export default function Navbar() {
     >
       <div className="screen-max-width flex-between">
         <h1 className="logo">
-          <a href="/">Charllson</a>
+          <a href="#hero" onClick={(e) => handleNavClick(e, 'hero')} >Charllson</a>
         </h1>
 
         {/* Desktop Navbar */}
