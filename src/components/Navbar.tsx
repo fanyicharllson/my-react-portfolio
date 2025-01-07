@@ -30,7 +30,7 @@ export default function Navbar() {
       const heroSection = document.querySelector("#hero");
       if (heroSection) {
         const heroHeight = heroSection.getBoundingClientRect().height;
-        setIsSticky(window.scrollY > heroHeight);
+        setIsSticky(window.scrollY > (heroHeight * 0.5));
       }
     };
 
