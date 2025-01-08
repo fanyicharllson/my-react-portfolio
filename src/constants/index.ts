@@ -5,6 +5,9 @@ import {
   reactImage,
   typescriptImage,
   tailwindImage,
+  phoneImage,
+  emailImage,
+  locationImage,
 } from "../utils";
 import { foodImage } from "../utils";
 
@@ -164,4 +167,23 @@ export const TESTIMONIALS_DATA = [
   //   designation: "Co-founder at LaunchPad",
   //   src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   // },
+];
+
+//contact
+export const CONTACT_DATA = [
+  {
+    img: phoneImage,
+    title: "Phone",
+    disc: "+237 816 300 3000",
+  },
+  {
+    img: emailImage,
+    title: "Email",
+    disc: "fanyicharllson@gmail.com",
+  },
+  {
+    img: locationImage,
+    title: "Location",
+    disc: "Yaounde, Cameroon",
+  },
 ];

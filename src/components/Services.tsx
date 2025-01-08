@@ -35,16 +35,12 @@ export default function Services() {
                 {/* Number Badge */}
                 <div className="flex items-center gap-4 mb-6">
                   <span
-                    className="flex items-center justify-center w-12 h-12
-                    rounded-xl bg-gradient-to-r from-purple-600 to-purple-400
-                    text-white font-bold text-lg"
+                    className="badges"
                   >
                     {item.number}
                   </span>
                   <h3
-                    className="text-xl font-bold bg-gradient-to-r 
-                    from-purple-600 to-purple-400 
-                    text-transparent bg-clip-text"
+                    className="badges-title"
                   >
                     {item.title}
                   </h3>

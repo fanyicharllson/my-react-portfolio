@@ -5,6 +5,7 @@ import Services from "./components/Services";
 import Works from "./components/Works";
 import Skills from "./components/Skills";
 import Testimonials from "./components/Testimonials";
+import Contact from "./components/Contact";
 
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
         <Works />
         <Skills />
         <Testimonials />
+        <Contact />
       </main>
     </ThemeProvider>
   )

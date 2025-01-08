@@ -48,7 +48,7 @@ body {
     text-transparent bg-clip-text mb-4 text-3xl md:text-4xl lg:text-5xl font-bold;
 }
 .section-subtitle {
-  @apply mt-4 text-slate-600 dark:text-slate-400 text-lg md:text-xl max-w-2xl mx-auto;
+  @apply text-slate-600 dark:text-slate-400 text-lg md:text-xl max-w-2xl mx-auto;
 }
 .bg-gradient {
   background: linear-gradient(90deg, #2d1b4e 0%, #1a0b2e 100%);
@@ -100,7 +100,26 @@ body {
   .hero-text-style {
     @apply text-gray-500 dark:text-white;
   }
-  /* Services Section utility classes */
+
+  /* services Section utility classes */
+  .badges {
+    @apply flex items-center justify-center w-12 h-12
+    rounded-xl bg-gradient-to-r from-purple-600 to-purple-400
+    text-white font-bold text-lg;
+  }
+  .badges-title {
+    @apply text-xl font-bold bg-gradient-to-r 
+    from-purple-600 to-purple-400 
+    text-transparent bg-clip-text;
+  }
+  /* Contact Section utility classes */
+  .contact-input {
+    @apply w-full px-3 py-2 border rounded-md dark:bg-gray-800 dark:text-white bg-gray-100 text-gray-600 outline-none focus:border-purple-500 focus:ring-purple-500 focus:ring-1 transition-all duration-300;
+  }
+  .contact-label {
+    @apply block mb-2 text-gray-500 dark:text-white;
+  }
+
 }
 @layer base {
   :root {
