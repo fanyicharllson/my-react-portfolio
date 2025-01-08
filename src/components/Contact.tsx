@@ -128,7 +128,7 @@ export default function Contact() {
         </div>
         <div className="flex flex-col justify-center gap-4">
           {CONTACT_DATA.map((item, index) => (
-            <div className="flex items-center gap-4" key={index}>
+            <div className="flex items-center gap-4 flex-wrap" key={index}>
               <img
                 src={item.img}
                 alt={item.title}
