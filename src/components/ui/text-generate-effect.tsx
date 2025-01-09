@@ -38,9 +38,9 @@ export const TextGenerateEffect: React.FC<TextGenerateEffectProps> = ({
     }, [words, delay, continuous]);
   
     return (
-      <div className={`${className} ${smoothScroll ? 'transition-all duration-300' : ''}`}>
+      <span className={`${className} ${smoothScroll ? 'transition-all duration-300' : ''}`}>
         {displayedText}
         <span className="animate-pulse text-purple-500">|</span>
-      </div>
+      </span>
     );
   };

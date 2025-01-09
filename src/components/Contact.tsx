@@ -6,6 +6,7 @@ export default function Contact() {
     firstName: "",
     lastName: "",
     email: "",
+    subject: "",
     message: "",
   });
 
@@ -24,7 +25,7 @@ export default function Contact() {
     // Here you would typically handle form submission
     console.log("Form submitted:", formData);
     // Reset form
-    setFormData({ firstName: "", lastName: "", email: "", message: "" });
+    setFormData({ firstName: "", lastName: "", email: "", subject: "", message: "" });
   };
 
   return (
@@ -88,17 +89,17 @@ export default function Contact() {
               <label htmlFor="subject" className="contact-label">
                 Subject
               </label>
-              <select name="subject" id="subject" className="contact-input">
+              <select name="subject" id="subject" className="contact-input" onChange={handleChange} required value={formData.subject}>
                 <option value="" className="contact-input">
                   Select Subject
                 </option>
-                <option value="Web Development" className="contact-input">
+                <option value="web-development" className="contact-input">
                   Web Development
                 </option>
-                <option value="Web Development" className="contact-input">
+                <option value="app-development" className="contact-input">
                   App Development
                 </option>
-                <option value="Web Development" className="contact-input">
+                <option value="responsive-design" className="contact-input">
                   Responsive Design
                 </option>
               </select>
