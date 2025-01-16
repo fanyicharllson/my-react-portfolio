@@ -33,7 +33,7 @@ export default function Hero() {
                 <div className="pt-4 sm:pt-8">
                   <span className="text-5xl sm:text-7xl font-bold">
                     <span className="text-purple-500 inline-block">
-                      Web Developer
+                      Full Stack Developer
                     </span>
                   </span>
                 </div>

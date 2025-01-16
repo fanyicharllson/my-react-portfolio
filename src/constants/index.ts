@@ -110,7 +110,7 @@ export const SKILLS_DATA: Skill[] = [
   },
   {
     img: reactImage,
-    title: "React",
+    title: "React.js",
     percentage: "85%",
   },
   {
